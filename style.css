@@ -14,7 +14,7 @@
 :root{
     /* Colors */
     --white-color: #fff;
-    --dark-color: rgb(82, 82, 82);
+    --dark-color: rgb(46, 46, 46);
     --primary-color: rgb(85, 38, 38);
     --secondary-color: orange;
     --light-pink-color: rgb(252, 244, 245);
@@ -262,6 +262,71 @@ header .navbar {
 
 }
 
+/*Menu section styles*/
+
+.menu-section{
+    color: var(--white-color);
+    background: var(--dark-color);
+    padding: 50px 0 100px;
+}
+.menu-section .menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:110px;
+    justify-content: space-between;
+}
+
+.menu-section .menu-list .menu-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% / 3 - 110px);
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.menu-section .menu-list .menu-item .menu-image{
+    max-width: 83%;
+    aspect-ratio: 1;
+    border-radius: var(--border-radius-circle);
+    margin-bottom: 15px;
+}
+
+.menu-section .menu-list .menu-item .name{
+    font-size: var(--font-size-large);
+    margin: 12px 0;;
+    font-weight: var(--font-weight-semibold);
+
+}
+
+.menu-section .menu-list .menu-item .price{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 6px 18px;
+    border-radius: var(--border-radius-medium);
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+.menu-section .menu-list .menu-item .text{
+    font-size: var(--font-size-medium);
+}
+
+
+/*Responsive media query code for max width 1024px*/
+@media screen and (max-width:1024px ){
+
+    .menu-section .menu-list{
+        gap:60px;
+    }
+    .menu-section .menu-list .menu-item{
+        width: calc(100% / 3 - 60px);
+    }
+}
 
 /*Responsive media query code for max width 900px*/
 @media screen and (max-width:900px ){
@@ -367,4 +432,21 @@ header .navbar {
 
     }
 
+    .menu-section .menu-list{
+        gap:30px;
+    }
+    .menu-section .menu-list .menu-item{
+        width: calc(100% / 2 - 30px);
+    }
+
+    .menu-section .menu-list .menu-item .menu-image{
+        max-width: 200px;
+    }
+
+}
+
+@media screen and (max-width:640px ){
+    .menu-section .menu-list .menu-item{
+        width: 100%;
+    }
 }
