@@ -391,6 +391,79 @@ header .navbar {
     transform: scale(1.25)
 }
 
+/*Contact us styles*/
+.contact-section{
+    background: var(--light-pink-color);
+    padding: 50px 0 100px;
+
+}
+
+.contact-section .section-content{
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.contact-section .contact-info-list .contact-info{
+    display: flex;
+    gap:20px;
+    margin: 20px 0;
+    align-items: center;
+
+}
+
+.contact-section .contact-info-list .contact-info i{
+    font-size: var(--font-size-medium);
+
+}
+
+.contact-section .contact-form .form-input{
+    width: 100%;
+    height: 50px;
+    background: white;
+    border: 1px solid var(--medium-gray-color);
+    border-radius: var(--border-radius-small);
+    padding: 0 12px;
+    outline: none;
+    margin-bottom: 16px;
+
+}
+
+.contact-section .contact-form .form-input:focus{
+    border-color: var(--secondary-color);
+}
+
+.contact-section .contact-form textarea.form-input{
+    height: 100px;
+    padding: 12px;
+    resize: vertical;
+
+}
+
+.contact-section .contact-form{
+    width: 50%;
+}
+
+.contact-section .contact-form .submit-button{
+    background: var(--primary-color);
+    padding: 10px 26px;
+    color: white;
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-medium);
+    transition: 0.3s ease;
+    align-content: center;
+
+}
+
+.contact-section .contact-form .submit-button:hover{
+    background: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+
 
 /*Responsive media query code for max width 1024px*/
 @media screen and (max-width:1024px ){
@@ -483,7 +556,7 @@ header .navbar {
 
     }
 
-    .hero-section .hero-details :is(.subtitle,.description), .about-section, .about-details{
+    .hero-section .hero-details :is(.subtitle,.description), .about-section, .about-details, .contact-section .contact-form{
         max-width: 100%;
     }
 
@@ -544,7 +617,11 @@ header .navbar {
   .gallery-section .gallery-list .gallery-item{
     width: calc(100% / 2 - 30px)
   }
-    
+
+  .contact-section .section-content{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
 }
 
